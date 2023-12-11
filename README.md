@@ -70,6 +70,6 @@ To start using the application, follow these steps:
 5. **Access the Application:**
    - Open a browser and go to [http://localhost:3000](http://localhost:3000) to use the MERN Exercise Tracker.
 
-## 6. Contributing
+## Contributing
 
 If interested in contributing to the project, please refer to the [contributing guidelines](CONTRIBUTING.md).
