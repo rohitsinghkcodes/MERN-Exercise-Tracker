@@ -22,17 +22,17 @@ export default class Navbar extends Component {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ml-auto">
             <li className="nav-item">
-              <Link to="/" className="nav-link">
+              <Link to="/" className="nav-link nav-btn">
                 Exercises
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/create" className="nav-link">
+              <Link to="/create" className="nav-link nav-btn">
                 Create Exercise Log
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/user" className="nav-link">
+              <Link to="/user" className="nav-link nav-btn">
                 Create User
               </Link>
             </li>
