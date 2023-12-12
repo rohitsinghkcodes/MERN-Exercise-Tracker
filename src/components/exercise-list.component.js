@@ -21,7 +21,9 @@ const Exercise = (props) => (
         type="button"
         className="btn btn-danger"
         onClick={() => {
-          props.deleteExercise(props.exercise._id);}}>
+          props.deleteExercise(props.exercise._id);
+        }}
+      >
         Delete
       </button>
     </td>
@@ -48,9 +50,9 @@ export default class ExerciseList extends Component {
 
   deleteExercise(id) {
     const isConfirmed = window.confirm("Are you sure you want to delete this exercise?");
-    
-    if(isConfirmed){  
-        axios
+
+    if (isConfirmed) {
+      axios
         .delete("https://exer-tracker-d8gf.onrender.com/exercises/" + id)
         .then((res) => console.log(res.data))
         .catch((err) => console.log(err));
@@ -77,27 +79,28 @@ export default class ExerciseList extends Component {
   render() {
     return (
       <div>
-       <div className="block1">
+        <div className="block1">
           <h3>
             <b>LOGGED EXERCISES</b>
           </h3>
         </div>
 
         <div className="block2">
-
-        <table className="table">
-          <thead className="thead-dark">
-            <tr>
-              <th>Username</th>
-              <th>Description</th>
-              <th>Duration (in minutes)</th>
-              <th>Date (YYYY-MM-DD)</th>
-              <th>Edit Exercise</th>
-              <th>Delete Exercise</th>
-            </tr>
-          </thead>
-          <tbody>{this.exerciseList()}</tbody>
-        </table>
+          <div className="table-responsive">
+            <table className="table">
+              <thead className="thead-dark">
+                <tr>
+                  <th>Username</th>
+                  <th>Description</th>
+                  <th>Duration (in minutes)</th>
+                  <th>Date (YYYY-MM-DD)</th>
+                  <th>Edit Exercise</th>
+                  <th>Delete Exercise</th>
+                </tr>
+              </thead>
+              <tbody>{this.exerciseList()}</tbody>
+            </table>
+          </div>
         </div>
       </div>
     );
